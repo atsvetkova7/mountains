@@ -1,0 +1,55 @@
+.aboutUs {
+	background-color: #f6f4f4;
+	.aboutUs__inner {
+		background-image: url("../img/bg2-trans.png");
+		.aboutUs__title {
+			@include title__second(2em, 2.2px, 0, left);
+		}
+		.aboutUs__text {
+			color: $color-section;
+			font-size: 1.4em;
+			font-family: $font-Open;
+			max-width: 350px;
+			line-height: 26px;
+			padding-top: 20px;
+		}
+	}
+}
+
+.aboutUs__content {
+	padding-top: 200px;
+	padding-bottom: 215px;
+	@include respondTo(tabletmax) {
+		padding-bottom: 20px;
+	}
+	@include respondTo(smartphone)  {
+		padding-top: 50px;
+	}
+}
+.aboutUs__btn {
+	margin-top: 28px;
+}
+.aboutUs__img {
+	position: relative;
+	.aboutUs__img-after {
+		display: block;
+		width: 100%;
+		transform: translate(0%, -10%);
+		margin-bottom: 10px;
+		@include respondTo(tabletmax) {
+			transform: translate(0%, 0%);
+		}
+	}
+
+	.aboutUs__img-before {
+		position: absolute;
+		bottom: 30px;
+		left: -10%;
+		@include respondTo(tabletmax) {
+			transform: translate(0%, 0%);
+			width: 100%;
+			position: static;
+		}
+	}
+}
+

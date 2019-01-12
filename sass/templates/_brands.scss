@@ -1,0 +1,20 @@
+.brands {
+	background-color: #f8f9fa;
+	.grid-row {
+		justify-content: space-around;
+		align-items: center;
+		.brands__img {
+			padding-top: 55px;
+			padding-bottom: 60px;
+			display: block;
+			width: 70px;
+		}
+	@include respondTo(smartphone) {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		.brands__img {
+			width: 15%;
+		}
+	}
+	}
+}

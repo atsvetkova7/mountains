@@ -1,0 +1,104 @@
+.doYouWant {
+	background-color: #f6f4f4;
+	background-image: url("../img/what.jpg");
+	background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+	position: relative;
+	padding-bottom:  225px;
+	padding-top: 146px;
+	@include respondTo(tabletmax) {
+		padding-bottom:  25px;
+		padding-top: 25px;
+	}
+}
+.doYouWant__title {
+	@include title__second(2em, 2.2px, 0, left);
+}
+.doYouWant__text {
+	color: $color-section;
+	font-size: 1.6em;
+	font-family: $font-Open;
+	line-height: 25px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+
+.form {
+	position: relative;
+    &:after {
+        @include pseudo();
+        @include sprite(-199px -81px, 1px, 35px);
+        top: 12px;
+        left: 33%;
+        @include respondTo(tabletmax) {
+            display: none;
+        }
+    }
+	.form__name,
+	.form__phone {
+		border: none;
+		padding-top: 22px;
+		padding-bottom: 21px;
+		padding-left: 20px;
+		padding-right: 10px;
+		font-size: 1.6em;
+		color: $color-form;
+		&:focus {
+			outline: none;
+			@include placeholder {
+				color: transparent;
+			}
+		}
+	}
+	.form__name {
+		border-top-left-radius: $br;
+		border-bottom-left-radius: $br;
+		width: 33%;
+		@include respondTo(tabletmax) {
+			width: 100%;
+			border-radius: $br;
+			margin-bottom: 10px;
+		}
+	}
+	.form__phone {
+		border-top-right-radius: $br;
+		border-bottom-right-radius: $br;
+		width: 66%;
+		padding-right: 230px;
+        margin-left: -5px;
+		@include respondTo(tabletmax) {
+			width: 100%;
+			border: none;
+			margin-left: 0;
+			border-radius: $br;
+			margin-bottom: 10px;
+			padding-right: 10px;
+		}
+	}
+	.form__subtext {
+		color: $color-main;
+		font-size: 1.4em;
+		font-family: $font-Open;
+		line-height: 34px;
+		position: relative;
+		margin-top: 10px;
+		padding-left: 25px;
+		&:before {
+			@include pseudo();
+			@include sprite(-140px -65px, 14px, 16px);
+			left: 0;
+			top: 10px;
+		}
+	}
+	.form__btn {	
+		position: absolute;
+		right: 1.5%;
+		top: 3px;	
+		@include respondTo(tabletmax) {
+			position: static;
+			width: 100%;
+		}
+	}
+}
